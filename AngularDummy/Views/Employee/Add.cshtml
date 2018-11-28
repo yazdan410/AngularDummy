@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Add Employee";
+}
+<style>
+    .btn-space {
+        margin-left: -5%;
+        background-color: cornflowerblue;
+        font-size: large;
+    }
+</style>
+
+<h2>Addd new Employee</h2>
+<div ng-app="myApp">
+    <div ng-controller="myCtrl">
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Name:</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" id="inputName" placeholder="Name" ng-model="Name">
+            </div>
+
+        </div> <br />
+        <div class="col-sm-6 col-lg-4">
+            <div class="form-group">
+                <label class="col-md-4 control-label">Gender:</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="inputGender" placeholder="Gender" ng-model="Gender">
+                </div>
+            </div>
+        </div>  
+        <br />
+        <div class="col-sm-6 col-lg-4">
+            <div class="form-group">
+                <label class="col-md-4 control-label">Salary:</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="inputSalary" placeholder="Salary" ng-model="Salary">
+                </div>
+            </div>
+        </div>  
+        
+        <br />
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <input type="button" id="btnSave" class="form-control btn-space" value="Submit" ng-click="InsertData()" />
+            </div>
+        </div> <br />
+        <br />
+
+        @Html.ActionLink("Go to Main", "Index", "Employee");
+
+    </div>  
+    
+      
+</div>
